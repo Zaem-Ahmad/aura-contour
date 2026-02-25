@@ -42,9 +42,10 @@ export default function IntroSection() {
             About Aura Contour
           </h2>
           <p className="text-lg md:text-xl text-foreground/80 leading-relaxed max-w-3xl mx-auto animate-fade-in-up delay-200">
-            At Aura Contour, we believe beauty is an art form. Our team of expert aestheticians and beauty professionals
-            are dedicated to enhancing your natural radiance through personalized treatments and cutting-edge
-            techniques. Every service is designed to make you feel confident, rejuvenated, and absolutely luminous.
+            Aura Contour is Karachi&apos;s premier aesthetic clinic in DHA Phase 8—where artistry meets luxury. 
+            Our certified experts deliver Hydrafacial, PRP, laser hair removal, dermaplaning, BB glow, and advanced 
+            facial treatments. Every service is tailored to enhance your natural radiance with premium products 
+            and cutting-edge techniques.
           </p>
         </div>
 

@@ -112,27 +112,27 @@ export default function Footer() {
             <h4 className="font-semibold mb-6 text-accent text-lg">Services</h4>
             <ul className="space-y-3 text-sm text-background/80">
               <li>
-                <Link href="/services?category=Hair Care" className="group flex items-center gap-2 hover:text-accent transition-all duration-300 cursor-pointer">
+                <Link href="/services?category=Hair%20Cuts%20%26%20Styling" className="group flex items-center gap-2 hover:text-accent transition-all duration-300 cursor-pointer">
                   <span className="w-0 group-hover:w-2 h-0.5 bg-accent transition-all duration-300"></span>
-                  Hair Care
+                  Hair Care Karachi
                 </Link>
               </li>
               <li>
-                <Link href="/services?category=Facials" className="group flex items-center gap-2 hover:text-accent transition-all duration-300 cursor-pointer">
+                <Link href="/services?category=Facial Treatments" className="group flex items-center gap-2 hover:text-accent transition-all duration-300 cursor-pointer">
                   <span className="w-0 group-hover:w-2 h-0.5 bg-accent transition-all duration-300"></span>
-                  Facials
+                  Facial Treatments DHA
                 </Link>
               </li>
               <li>
-                <Link href="/services?category=Make-up" className="group flex items-center gap-2 hover:text-accent transition-all duration-300 cursor-pointer">
+                <Link href="/services?category=Hand and Feet Wellness" className="group flex items-center gap-2 hover:text-accent transition-all duration-300 cursor-pointer">
                   <span className="w-0 group-hover:w-2 h-0.5 bg-accent transition-all duration-300"></span>
-                  Make-up
+                  Manicure &amp; Pedicure
                 </Link>
               </li>
               <li>
-                <Link href="/services?category=Skin Treatment" className="group flex items-center gap-2 hover:text-accent transition-all duration-300 cursor-pointer">
+                <Link href="/services" className="group flex items-center gap-2 hover:text-accent transition-all duration-300 cursor-pointer">
                   <span className="w-0 group-hover:w-2 h-0.5 bg-accent transition-all duration-300"></span>
-                  Skin Treatment
+                  All Services
                 </Link>
               </li>
             </ul>

@@ -102,15 +102,15 @@ export default function HeroSection() {
 
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold mb-6 text-balance leading-tight">
           <span className="block animate-fade-in-up text-white drop-shadow-[0_2px_20px_rgba(0,0,0,0.8)]">
-            Where Artistry
+            Best Salon in DHA Karachi
           </span>
           <span className="block animate-fade-in-up delay-200 text-accent drop-shadow-[0_0_40px_rgba(212,175,55,0.8)] [text-shadow:0_2px_15px_rgba(212,175,55,0.5)]">
-            Meets Aura
+            Aura Contour
           </span>
         </h1>
 
         <p className="text-lg md:text-xl lg:text-2xl text-white mb-12 text-balance max-w-2xl mx-auto leading-relaxed animate-fade-in-up delay-400 font-light drop-shadow-[0_2px_20px_rgba(0,0,0,0.6)]">
-          Experience premium aesthetic and beauty services crafted for your unique elegance
+          Luxury aesthetic clinic in DHA Phase 8. Hydrafacial, PRP, laser hair removal, BB glow & facial treatments in Karachi.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up delay-600">

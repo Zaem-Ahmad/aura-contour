@@ -8,28 +8,28 @@ export default function FAQSection() {
 
   const faqs = [
     {
-      question: "What should I bring to my appointment?",
-      answer: "Please arrive with clean, makeup-free skin for facial treatments. For hair services, come with clean, dry hair. We'll provide all necessary products and tools. Feel free to bring any specific preferences or inspiration photos."
+      question: "Where is the best salon in DHA Karachi?",
+      answer: "Aura Contour is located in DHA Phase 8, Al Murtaza Commercial—offering luxury facials, Hydrafacial, PRP, laser hair removal, BB glow & advanced aesthetic treatments. We're your trusted beauty salon near you in Karachi."
     },
     {
-      question: "How far in advance should I book?",
-      answer: "We recommend booking at least 1-2 weeks in advance, especially for bridal makeup and special events. However, we often have same-day availability for regular services. Contact us via WhatsApp for last-minute appointments."
+      question: "Do you offer Hydrafacial in Karachi?",
+      answer: "Yes. We provide professional Hydrafacial treatments at our DHA Phase 8 clinic. Our certified aestheticians use premium products and techniques for deep cleansing, hydration, and radiant skin."
     },
     {
-      question: "Do you offer consultations?",
-      answer: "Yes! We offer complimentary consultations for new clients, especially for bridal services, major color changes, or specialized treatments. During the consultation, we'll discuss your goals, assess your needs, and create a personalized treatment plan."
+      question: "Is PRP treatment available at your aesthetic clinic?",
+      answer: "Yes. Aura Contour offers PRP (Platelet-Rich Plasma) treatment for skin rejuvenation and hair restoration. Book a consultation to learn how PRP can benefit your skin and hair."
     },
     {
-      question: "What is your cancellation policy?",
-      answer: "We understand that plans can change. Please notify us at least 24 hours in advance if you need to reschedule or cancel. Late cancellations may be subject to a fee. We're happy to work with you to find an alternative time."
+      question: "Do you offer laser hair removal in Karachi?",
+      answer: "We offer laser hair removal and Pico laser treatments for smooth, long-lasting results. Our clinic in DHA Phase 8 uses advanced technology for safe, effective hair reduction."
     },
     {
-      question: "What payment methods do you accept?",
-      answer: "We accept cash, bank transfers, and major credit/debit cards. Payment is typically made at the time of service. For bridal packages or large bookings, a deposit may be required to secure your appointment."
+      question: "What facial treatments do you offer in DHA?",
+      answer: "We offer Hydrafacial, dermaplaning, Guinot facials, protein radiance treatments, brightening facials & personalized facials. Every treatment is tailored to your skin type and goals."
     },
     {
-      question: "Do you use cruelty-free products?",
-      answer: "Yes, we prioritize using high-quality, professional-grade products from reputable brands. Many of our products are cruelty-free and we're committed to ethical beauty practices. Feel free to ask about specific products during your visit."
+      question: "Are there Ramadan beauty deals in Karachi?",
+      answer: "Yes. Aura Contour runs special Ramadan beauty offers on facials, hair treatments & more. Contact us on WhatsApp to know the latest Ramadan deals and book your appointment."
     },
   ]
 
@@ -51,7 +51,7 @@ export default function FAQSection() {
             Frequently Asked Questions
           </h2>
           <p className="text-lg md:text-xl text-foreground/70">
-            Everything you need to know before your visit
+            Aesthetic clinic &amp; salon in DHA Karachi—answers to your beauty questions
           </p>
         </div>
 

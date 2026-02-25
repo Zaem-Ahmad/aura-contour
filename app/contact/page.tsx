@@ -108,8 +108,8 @@ export default function ContactPage() {
               Get In Touch
             </h1>
             <p className="text-lg md:text-xl text-white/95 max-w-3xl leading-relaxed drop-shadow-[0_2px_15px_rgba(0,0,0,0.6)]">
-              Have questions? We'd love to hear from you. Contact us today to book your appointment or learn more about
-              our services.
+              Book your appointment at Karachi&apos;s best aesthetic clinic in DHA Phase 8. Hydrafacial, PRP, facials &amp; more. 
+              Call, WhatsApp or visit us.
             </p>
           </div>
         </div>

@@ -46,7 +46,7 @@ export default function GalleryPreviewV2() {
               Our Work
             </h2>
             <p className="text-lg md:text-xl text-foreground/70 max-w-2xl mx-auto">
-              Discover the artistry and precision behind every transformation
+              Real results from Karachi&apos;s best salon in DHA—facials, Hydrafacial, hair &amp; beauty transformations
             </p>
           </div>
 

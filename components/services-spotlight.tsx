@@ -7,23 +7,23 @@ export default function ServicesSpotlight() {
   const services = [
     {
       id: 1,
-      title: "Hair Care",
-      description: "Professional hair treatments, styling, and color services",
-      icon: Scissors,
+      title: "Facial Treatments in DHA",
+      description: "Hydrafacial, dermaplaning, and luxury facials for radiant skin—serving Karachi & DHA Phase 8",
+      icon: Sparkles,
       gradient: "from-accent/20 via-accent/10 to-transparent"
     },
     {
       id: 2,
-      title: "Facials",
-      description: "Rejuvenating facial treatments for all skin types",
+      title: "Advanced Aesthetic Procedures",
+      description: "PRP treatment, laser hair removal, BB glow & Pico laser—expert care at the best aesthetic clinic in Karachi",
       icon: Sparkles,
       gradient: "from-primary/30 via-primary/15 to-transparent"
     },
     {
       id: 3,
-      title: "Make-up",
-      description: "Expert makeup application for any occasion",
-      icon: Palette,
+      title: "Hair & Beauty Salon",
+      description: "Professional hair treatments, styling, manicure, pedicure & makeup—your luxury beauty salon near you",
+      icon: Scissors,
       gradient: "from-accent/20 via-accent/10 to-transparent"
     },
   ]
@@ -34,10 +34,10 @@ export default function ServicesSpotlight() {
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-foreground mb-6">
-            Our Services
+            Our Salon Services
           </h2>
           <p className="text-lg md:text-xl text-foreground/70">
-            Discover our signature beauty and aesthetic treatments
+            Hydrafacial, PRP, laser hair removal, facials &amp; more—Karachi&apos;s trusted aesthetic clinic in DHA Phase 8
           </p>
         </div>
 
