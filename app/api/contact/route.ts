@@ -45,7 +45,7 @@ export async function POST(request: NextRequest) {
 
     // Send email to Aura Contour
     const { data, error } = await resend.emails.send({
-      from: process.env.RESEND_FROM_EMAIL || "Aura Contour <onboarding@resend.dev>",
+      from: process.env.RESEND_FROM_EMAIL || "Aura Contour <contact@auracontour.com>",
       to: ["auracontour999@gmail.com"],
       replyTo: email,
       subject: `Contact Form: ${subjectLabel}`,
