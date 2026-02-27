@@ -100,6 +100,10 @@ export default function HeroSection() {
           <div className="h-px w-16 bg-gradient-to-r from-transparent via-accent to-transparent"></div>
         </div>
 
+        <p className="text-sm md:text-base tracking-[0.35em] uppercase text-white/90 mb-4 animate-fade-in-up drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)]">
+          Aura Contour
+        </p>
+
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold mb-6 text-balance leading-tight">
           <span className="block animate-fade-in-up text-white drop-shadow-[0_2px_20px_rgba(0,0,0,0.8)]">
             Where Artistry

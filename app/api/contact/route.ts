@@ -23,8 +23,9 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Check if Resend API key is configured
-    if (!process.env.RESEND_API_KEY) {
+    // Support both RESEND_API_KEY and legacy API_KEY env names.
+    const resendApiKey = process.env.RESEND_API_KEY || process.env.API_KEY
+    if (!resendApiKey) {
       console.error("RESEND_API_KEY is not configured")
       return NextResponse.json(
         { error: "Email service is not configured. Please contact the administrator." },
@@ -32,7 +33,7 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    const resend = new Resend(process.env.RESEND_API_KEY)
+    const resend = new Resend(resendApiKey)
 
     // Map subject values to readable labels
     const subjectLabels: Record<string, string> = {
@@ -43,10 +44,11 @@ export async function POST(request: NextRequest) {
     }
     const subjectLabel = subjectLabels[subject] || subject
 
-    const senderFrom = process.env.RESEND_FROM_EMAIL || "Aura Contour <onboarding@resend.dev>"
+    const fallbackSender = "Aura Contour <onboarding@resend.dev>"
+    const senderFrom = process.env.RESEND_FROM_EMAIL || fallbackSender
 
     // Send email to Aura Contour
-    const { data, error } = await resend.emails.send({
+    let { error } = await resend.emails.send({
       from: senderFrom,
       to: ["auracontour999@gmail.com"],
       replyTo: email,
@@ -160,6 +162,126 @@ export async function POST(request: NextRequest) {
         </html>
       `,
     })
+
+    // Retry with Resend's onboarding sender if custom sender/domain fails.
+    if (error && senderFrom !== fallbackSender) {
+      console.error("Resend primary sender failed, retrying with fallback sender:", error)
+      const retryResult = await resend.emails.send({
+        from: fallbackSender,
+        to: ["auracontour999@gmail.com"],
+        replyTo: email,
+        subject: `Contact Form: ${subjectLabel}`,
+        html: `
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <meta charset="utf-8">
+            <style>
+              body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                color: #333;
+                max-width: 600px;
+                margin: 0 auto;
+                padding: 20px;
+              }
+              .header {
+                background: linear-gradient(135deg, #d4af37 0%, #b8941f 100%);
+                color: white;
+                padding: 30px;
+                text-align: center;
+                border-radius: 10px 10px 0 0;
+              }
+              .content {
+                background: #f9f9f9;
+                padding: 30px;
+                border-radius: 0 0 10px 10px;
+              }
+              .field {
+                margin-bottom: 20px;
+                padding: 15px;
+                background: white;
+                border-left: 4px solid #d4af37;
+                border-radius: 5px;
+              }
+              .field-label {
+                font-weight: bold;
+                color: #d4af37;
+                margin-bottom: 5px;
+                text-transform: uppercase;
+                font-size: 12px;
+                letter-spacing: 1px;
+              }
+              .field-value {
+                color: #333;
+                font-size: 16px;
+              }
+              .message-box {
+                background: white;
+                padding: 20px;
+                border-left: 4px solid #d4af37;
+                border-radius: 5px;
+                margin-top: 10px;
+                white-space: pre-wrap;
+              }
+              .footer {
+                text-align: center;
+                margin-top: 30px;
+                padding-top: 20px;
+                border-top: 1px solid #ddd;
+                color: #666;
+                font-size: 12px;
+              }
+            </style>
+          </head>
+          <body>
+            <div class="header">
+              <h1 style="margin: 0; font-size: 28px;">New Contact Form Submission</h1>
+              <p style="margin: 10px 0 0 0; opacity: 0.9;">Aura Contour Aesthetic & Beauty Salon</p>
+            </div>
+            <div class="content">
+              <div class="field">
+                <div class="field-label">Name</div>
+                <div class="field-value">${name}</div>
+              </div>
+              
+              <div class="field">
+                <div class="field-label">Email</div>
+                <div class="field-value">
+                  <a href="mailto:${email}" style="color: #d4af37; text-decoration: none;">${email}</a>
+                </div>
+              </div>
+              
+              ${phone ? `
+              <div class="field">
+                <div class="field-label">Phone</div>
+                <div class="field-value">
+                  <a href="tel:${phone}" style="color: #d4af37; text-decoration: none;">${phone}</a>
+                </div>
+              </div>
+              ` : ''}
+              
+              <div class="field">
+                <div class="field-label">Subject</div>
+                <div class="field-value">${subjectLabel}</div>
+              </div>
+              
+              <div class="field">
+                <div class="field-label">Message</div>
+                <div class="message-box">${message.replace(/\n/g, '<br>')}</div>
+              </div>
+              
+              <div class="footer">
+                <p>This email was sent from the Aura Contour contact form.</p>
+                <p>You can reply directly to this email to respond to ${name}.</p>
+              </div>
+            </div>
+          </body>
+        </html>
+      `,
+      })
+      error = retryResult.error
+    }
 
     if (error) {
       console.error("Resend error:", error)
