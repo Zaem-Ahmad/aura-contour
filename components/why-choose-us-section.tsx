@@ -56,7 +56,7 @@ export default function WhyChooseUsSection() {
             Why Choose Aura Contour
           </h2>
           <p className="text-lg md:text-xl text-foreground/70 max-w-2xl mx-auto">
-            Karachi&apos;s trusted aesthetic clinic in DHA Phase 8—premium beauty care you deserve
+            Experience the difference of premium beauty care
           </p>
         </div>
 

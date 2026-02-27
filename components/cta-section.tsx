@@ -37,7 +37,7 @@ export default function CTASection() {
         </div>
         <div className="animate-fade-in-up delay-200">
           <p className="text-lg md:text-xl text-accent-foreground/95 mb-12 text-balance max-w-2xl mx-auto leading-relaxed drop-shadow-md">
-            Book your appointment—the best salon in DHA Karachi. Hydrafacial, PRP, laser &amp; facials await.
+            Book your appointment today and experience the Aura Contour difference
           </p>
         </div>
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in-up delay-400">

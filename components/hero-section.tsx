@@ -102,15 +102,19 @@ export default function HeroSection() {
 
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold mb-6 text-balance leading-tight">
           <span className="block animate-fade-in-up text-white drop-shadow-[0_2px_20px_rgba(0,0,0,0.8)]">
-            Best Salon in DHA Karachi
+            Where Artistry
           </span>
           <span className="block animate-fade-in-up delay-200 text-accent drop-shadow-[0_0_40px_rgba(212,175,55,0.8)] [text-shadow:0_2px_15px_rgba(212,175,55,0.5)]">
-            Aura Contour
+            Meets Aura
           </span>
         </h1>
 
         <p className="text-lg md:text-xl lg:text-2xl text-white mb-12 text-balance max-w-2xl mx-auto leading-relaxed animate-fade-in-up delay-400 font-light drop-shadow-[0_2px_20px_rgba(0,0,0,0.6)]">
-          Luxury aesthetic clinic in DHA Phase 8. Hydrafacial, PRP, laser hair removal, BB glow & facial treatments in Karachi.
+          Experience premium aesthetic and beauty services crafted for your unique elegance
+        </p>
+        <p className="sr-only">
+          Best salon in DHA Karachi, aesthetic clinic in Karachi, Hydrafacial in Karachi, PRP treatment in Karachi,
+          laser hair removal in Karachi, facial treatments in DHA, beauty salon near me Karachi.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up delay-600">
@@ -157,15 +161,6 @@ export default function HeroSection() {
         </div> */}
       </div>
 
-      {/* Enhanced scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-20">
-        <div className="flex flex-col items-center gap-2">
-          <span className="text-xs text-white uppercase tracking-wider font-medium drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">Scroll</span>
-          <svg className="w-6 h-6 text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-          </svg>
-        </div>
-      </div>
     </section>
   )
 }

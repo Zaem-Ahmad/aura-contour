@@ -14,15 +14,15 @@ export default function MissionSection() {
           {/* Content */}
           <div className="flex flex-col justify-center">
             <p className="text-lg text-foreground/70 mb-4 leading-relaxed">
-              Born from a vision to redefine modern beauty in Karachi, Aura Contour is DHA Phase 8&apos;s trusted aesthetic clinic. 
-              We bring luxury aesthetics and personalized care—Hydrafacial, PRP, laser hair removal, BB glow & facial treatments—all under one roof.
+              Born from a vision to redefine modern beauty, Aura Contour offers a new standard in luxury aesthetics.
+              Created as an intimate beauty space where modern aesthetics meet personalized care, we believe beauty should feel empowering—never artificial.
             </p>
             <p className="text-lg text-foreground/70 mb-4 leading-relaxed">
-              Our certified experts combine innovative contouring techniques with precision and detail for natural, radiant results. 
-              Every treatment is tailored to your skin type and goals, from facials in DHA to advanced aesthetic procedures.
+              Our approach merges innovative contouring techniques with a meticulous eye for symmetry, precision, and detail to create results that feel effortlessly natural.
+              Every treatment is tailored—crafted to highlight your unique aura and bring out the most confident version of you.
             </p>
             <p className="text-lg text-foreground/70 leading-relaxed">
-              Located in Al Murtaza Commercial, DHA Phase 8, our studio is committed to safety, artistry, and elegance—the best salon in DHA Karachi for discerning clients.
+              Our studio is built on a commitment to safety, artistry, and refinement—helping you elevate your features with confidence and elegance.
             </p>
           </div>
         </div>

@@ -43,9 +43,11 @@ export async function POST(request: NextRequest) {
     }
     const subjectLabel = subjectLabels[subject] || subject
 
+    const senderFrom = process.env.RESEND_FROM_EMAIL || "Aura Contour <onboarding@resend.dev>"
+
     // Send email to Aura Contour
     const { data, error } = await resend.emails.send({
-      from: process.env.RESEND_FROM_EMAIL || "Aura Contour <contact@auracontour.com>",
+      from: senderFrom,
       to: ["auracontour999@gmail.com"],
       replyTo: email,
       subject: `Contact Form: ${subjectLabel}`,
@@ -162,7 +164,7 @@ export async function POST(request: NextRequest) {
     if (error) {
       console.error("Resend error:", error)
       return NextResponse.json(
-        { error: "Failed to send email. Please try again later." },
+        { error: "Unable to send right now. Please try again in a moment or contact us on WhatsApp." },
         { status: 500 }
       )
     }
@@ -170,7 +172,7 @@ export async function POST(request: NextRequest) {
     // Optionally send a confirmation email to the user
     if (process.env.RESEND_SEND_CONFIRMATION === "true") {
       await resend.emails.send({
-        from: process.env.RESEND_FROM_EMAIL || "Aura Contour <onboarding@resend.dev>",
+        from: senderFrom,
         to: [email],
         subject: "Thank you for contacting Aura Contour",
         html: `

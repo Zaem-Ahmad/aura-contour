@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Aura Contour">
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0d06f"/>
+      <stop offset="100%" stop-color="#c79a2b"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="48" fill="#111111"/>
+  <circle cx="128" cy="128" r="88" fill="none" stroke="url(#gold)" stroke-width="10"/>
+  <text x="128" y="146" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="78" fill="url(#gold)">A</text>
+</svg>

@@ -54,6 +54,14 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: { index: true, follow: true },
   },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/aura-contour.svg", type: "image/svg+xml" },
+    ],
+    shortcut: ["/favicon.ico"],
+    apple: ["/favicon.ico"],
+  },
   alternates: { canonical: siteUrl },
   category: "Beauty & Aesthetic",
 }
